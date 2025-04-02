@@ -2,12 +2,12 @@ package Variables;
 
 public class Main {
 	// Hozz létre 3 osztályváltozót és 3 konstanst.
-	static final String global1 = "Global variable";
-	static String global2 = global1;
-	static int global3 = 55;
-	static final long global4 = global3;
-	static final char global5 = 'a';
-	static int global6 = 156;
+	static final String CONSTANT_STRING = "Global variable";
+	static String stringValueable = CONSTANT_STRING;
+	static int integerValuable = 55;
+	static final long CONSTANT = integerValuable;
+	static final char CONSTANT_CHAR = 'a';
+	static int integerValuable2 = 156;
 		
 	public static void main (String[] args) {
 		
@@ -70,7 +70,7 @@ public class Main {
 	    String st2 =  "" + t + a + m + a2 + s;
 	    
 	    String st3 = st1;
-	    String st4 = "" + st1 + " " + s2;
+	    String st4 = st1 + " " + s2;
 	    
 	    String st5 = st1 + " "+ st2 + ", hogy telik a napod?";
 	    String st6 = "További szép napot," + st2 + "!";
@@ -97,12 +97,12 @@ public class Main {
         System.out.println("Az eredmény: " + result2);
         System.out.println("----------------------------");		
         
-        square("Tamás",5);
+        printSquare("Tamás",5);
         System.out.println("----------------------------");	
 	    
 	}
 	
-	public static void square(String nickname, int number) {
+	public static void printSquare(String nickname, int number) {
         System.out.println("Szia "+nickname +"! Az adott szám négyzete amit megadtál az a : " + (number*number));
     }
 }
