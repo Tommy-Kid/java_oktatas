@@ -1,4 +1,4 @@
-package Geometriai_alakzatok;
+package Geometria_alakzatok;
 
 public abstract class Shape {
 	protected int x; // rows

@@ -1,7 +1,7 @@
-package Geometriai_alakzatok;
+package Geometria_alakzatok;
 
 import java.util.Random;
-import Geometriai_alakzatok.*;
+
 
 public class Main {
 	public static void main (String[] args) {

@@ -1,4 +1,4 @@
-package Geometriai_alakzatok;
+package Geometria_alakzatok;
 
 public class Rectangle extends Shape {
 
