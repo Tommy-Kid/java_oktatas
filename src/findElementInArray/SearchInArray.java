@@ -1,28 +1,26 @@
 package findElementInArray;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
 public class SearchInArray {
 	public static int[] array = new int[8];
+	public static final int MIN = -6;
+    public static final int MAX = 6;
+    static Scanner scanner = new Scanner(System.in);
 	
 	public static int[] fillArray(){
 		Random rand = new Random();
-		boolean zeroIncluded = false;
 		 for (int i = 0; i < array.length; i++) {
-		        int intNumber = rand.nextInt(13) - 6;
+		        int intNumber = rand.nextInt(MAX - MIN + 1) + MIN;
 		        array[i] = intNumber;
-		        if (intNumber == 0) zeroIncluded = true;
 		}
-		
-		if (!zeroIncluded){
-			int randomIndex = rand.nextInt(array.length);
-			array[randomIndex] = 0;
-		}
-	
-		 for (int szam : array) {
-	            System.out.print(szam + " ");
-	     }
-		 return array;
+			
+		int randomIndex = rand.nextInt(array.length);
+		array[randomIndex] = 0;
+
+		System.out.println(Arrays.toString(array));
+		return array;
 	}
 	
 	
@@ -48,19 +46,24 @@ public class SearchInArray {
 	}
 	
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
+		
 	    System.out.println("Írd be, hogy 'exit' a kilépéshez. ENTER-t nyomj a megerősítéshez.\n");
 	    String input;
-		do {
-			Search();
-			scanner = new Scanner(System.in);
-			
-			System.out.print("Folytatod? (nyomj ENTER-t a folytatáshoz vagy írd be: 'exit'): ");
-			input = scanner.nextLine();
-	        
-		}while(!input.equalsIgnoreCase("exit"));
-		
-		scanner.close();
+		try {
+			do {
+				Search();
+				scanner = new Scanner(System.in);	
+				System.out.print("Folytatod? (nyomj ENTER-t a folytatáshoz vagy írd be: 'exit'): ");
+				input = scanner.nextLine();    
+			}while(!input.equalsIgnoreCase("exit"));
+				
+		} catch (Exception e) {
+			System.out.println("Hiba történt a fájl beolvasásakor. "+ e.getMessage());
+		}
+		finally{
+			scanner.close();
+		}
+	   
 		System.out.println("-----\nKöszönöm hogy tesztelted a működésem :)");
 	}
 }
