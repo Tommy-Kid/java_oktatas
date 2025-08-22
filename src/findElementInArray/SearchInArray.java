@@ -67,3 +67,4 @@ public class SearchInArray {
 		System.out.println("-----\nKöszönöm hogy tesztelted a működésem :)");
 	}
 }
+
