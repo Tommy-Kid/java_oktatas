@@ -105,6 +105,7 @@ public class Statistics {
 	           return (array[mid2] + (long) array[mid1]) / 2.0;
 	       }
 	    }
+	     //comment
 	    
 
 }
